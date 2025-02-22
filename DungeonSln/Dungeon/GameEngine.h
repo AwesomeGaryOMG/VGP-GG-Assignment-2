@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace Dung
+namespace dung
 {
 	class GameEngine
 	{
