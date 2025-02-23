@@ -22,7 +22,7 @@ namespace dung
 		// for testing
 		std::string getTempP() { return _tempP; }
 
-		// for testing
+		// for testing - cout GameEngine private member via friend class
 		void displayFriendStuff(dung::GameEngine& eng) {
 			std::cout << "Private engine member: " << eng._tempEngine << "\n";
 		}
