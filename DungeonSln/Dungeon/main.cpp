@@ -11,5 +11,13 @@ int main()
 
 	cout << "Hello World!\n";
 
+	dung::GameEngine test("testName");
+
+	cout << "test engine member: " << test.getTempE() << "\n";
+
+	dung::Player ptest("Player Test");
+
+	ptest.displayFriendStuff(test);
+
 	return 0;
 }
