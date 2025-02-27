@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "GameEngine.h"
+#include "Room.h"
 
 namespace dung
 {
@@ -13,14 +14,15 @@ namespace dung
 	public:
 		// Should contain attributes like currentRoom and healthPoints.
 
-		Player() :_tempP("") {};
-		Player(std::string name) :_tempP(name) {};
+		Player();
+		Player(std::string name);
+		Player(int hp, std::string name);
 
-		// for testing
-		void setTempP(std::string name) { _tempP = name; }
+		// There's no constructor that fulfills _currentRoom 
+		// because you shouldn't be initializing a player during gameplay
+		// where the engine should require the player to spawn in the room.
 
-		// for testing
-		std::string getTempP() { return _tempP; }
+
 
 		// for testing - cout GameEngine private member via friend class
 		void displayFriendStuff(dung::GameEngine& eng) {
@@ -28,8 +30,12 @@ namespace dung
 		}
 
 	private:
-		// for testing
-		std::string _tempP;
+		// Player's hitpoints
+		int _hp;
+		// Player name
+		std::string _name;
+		// Pointer pointing to player's current room
+		dung::Room* _currentRoom = nullptr;
 	};
 }
 
