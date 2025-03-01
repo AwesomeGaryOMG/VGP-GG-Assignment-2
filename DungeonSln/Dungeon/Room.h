@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 namespace dung
 {
@@ -10,18 +11,21 @@ namespace dung
 	public:
 		// Should contain attributes like item, trap, and isExit.
 
-		Room() :_tempR("") {};
-		Room(std::string name) :_tempR(name) {};
+		Room() :_posx(NULL), _posy(NULL), _nullroom(1) {};
+		Room(int x, int y) :_posx(x), _posy(y), _nullroom(0) {};
 
-		// for testing
-		void setTempR(std::string name) { _tempR = name; }
 
-		// for testing
-		std::string getTempR() { return _tempR; }
+		
 
 	private:
-		// for testing
-		std::string _tempR;
+		// If the position of the room is undefined then the room does not exist on the map.
+		// Not to be confused with the room position as (0,0).
+		int _nullroom;
+
+		// Room position
+		int _posx, _posy;
+
+
 	};
 }
 
