@@ -3,7 +3,7 @@
 #include "Item.h"
 
 // Tools can be single use or reusable
-class Tool : public Item
+class Tool : Item
 {
 public:
 	Tool(std::string name);

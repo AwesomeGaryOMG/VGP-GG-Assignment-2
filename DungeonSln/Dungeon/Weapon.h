@@ -3,7 +3,7 @@
 #include "Item.h"
 
 // Weapons hurt
-class Weapon : public Item
+class Weapon : Item
 {
 public:
 	Weapon(std::string name);
@@ -11,7 +11,6 @@ public:
 
 	// Either this thing returns something or not, and maybe this thing uses pointers from the entity using it.
 	//int attack();
-
 
 private:
 	// This weapon deals damage

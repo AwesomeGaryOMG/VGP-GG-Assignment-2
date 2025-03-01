@@ -8,11 +8,6 @@
 
 namespace dung
 {
-	class Enemy;
-	class Item;
-	class Weapon;
-	class Tool;
-
 	// Represents the game player.
 	class Player
 	{
@@ -27,13 +22,6 @@ namespace dung
 		// because you shouldn't be initializing a player during gameplay
 		// where the engine should require the player to spawn in the room.
 
-		void AddItem(Item item);
-
-		void Attack(dung::Enemy& enemy, Weapon item);
-
-		int Gethp();
-
-		void Sethp(int hp);
 
 
 		// for testing - cout GameEngine private member via friend class
@@ -48,8 +36,6 @@ namespace dung
 		std::string _name;
 		// Pointer pointing to player's current room
 		dung::Room* _currentRoom = nullptr;
-		// Player's inventory
-		std::vector<Item> _inventory;
 	};
 }
 
